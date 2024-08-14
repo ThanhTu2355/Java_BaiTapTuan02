@@ -1,6 +1,6 @@
 /*
  */
-package BaiTap01;
+package BaiTap02;
 
 public class ChuongTrinh {
 
