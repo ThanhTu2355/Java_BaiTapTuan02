@@ -3,7 +3,9 @@
 package lab02_BaiTap02;
 
 import java.util.ArrayList;
-import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Scanner;
 
 public class ChuongTrinh {
@@ -91,5 +93,14 @@ public class ChuongTrinh {
                 System.out.println("--------------------");
             }
         }
+    }
+    public static void sapXep(ArrayList<SinhVien> dssv) {
+        Comparator<SinhVien> cmp = new Comparator<SinhVien>() {
+            @Override
+            public int compare(SinhVien sv1, SinhVien sv2) {
+                return Double.valueOf(sv1.getDiem()).compareTo(Double.valueOf(sv2.getDiem()));
+            }
+        };
+        Collections.sort(dssv,cmp);
     }
 }
